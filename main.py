@@ -35,11 +35,13 @@ def autorunner(count=180, eatcount=3, attackcount=500, foodcount=9):
         rightclick_function(eatcount)
         eatcounter += 3
         if eatcounter >= 61:
+            print('changing stacks')
             scrolldown(1)
             eatcounter = 0
             foodcounter += 1
 
             if foodcounter == foodcount:
+                print('food eaten')
                 break
 
     print('done running')
