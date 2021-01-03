@@ -1,10 +1,9 @@
 import time
-
 import pyautogui
 
 
 def click_function(count):
-    print('starting clicks')
+    print(f'starting {count} hits')
     pyautogui.click(clicks=count, interval=3)
     print('done')
 
@@ -17,15 +16,16 @@ def rightclick_function(count):
         time.sleep(3)
         pyautogui.mouseUp(button='right')
         i += 1
-        print(i)
+    print('done eating')
 
 
-def scrolldown(count):
-    pyautogui.scroll(-1)
+def scrolldown(count=-1):
+    print('scrolling down')
+    pyautogui.scroll(count)
 
 
-def autorunner(count=10, eatcount=3, attackcount=500, foodcount=9):
-    print('starting in 5 seconds')
+def autorunner(count=180, eatcount=3, attackcount=500, foodcount=9):
+    print('starting in 5 seconds, please move the curser to the minecraft window')
     time.sleep(7)
     i = 0
     eatcounter = 0
@@ -62,5 +62,3 @@ if __name__ == "__main__":
         loopcount, eatcount, attackcount, foodcount = input(f'''Please enter the values you want to change in the 
         following order with no spaces"loopcount,eatcount,attackcount,foodcount" ''').split(',')
         autorunner(int(loopcount), int(eatcount), int(attackcount), int(foodcount))
-
-
