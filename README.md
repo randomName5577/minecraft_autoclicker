@@ -1,2 +1,3 @@
 # minecraft_autoclicker
-This is used to kill zombies at the bottom of the spawner. 
+
+This little script was created to get kills when standing at the zombie spawner. We had a very repetitive/time-consuming task and in order to make our lives easier I set up, this script to auto-click the buttons we need. It takes turns between attacking and eating. We would have to kill the zombies and the zombies only required one hit to kill because the zombies took fall damage. The parameters are adjustable for your use case, but by default, it will attack 500 times and then eat. It will keep doing it until it depletes all your food, at which point it will stop. That way you will not starve yourself to death. 
